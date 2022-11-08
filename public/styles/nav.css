@@ -1,0 +1,27 @@
+.nav-bar {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  padding: 1.5em;
+  justify-content: space-between;
+}
+
+
+#logo {
+  font-size: 3rem;
+}
+
+.write-tweet {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.fa-angles-down {
+  /* display: block !important; */
+  /* text-align: center; */
+  color: red;
+}
