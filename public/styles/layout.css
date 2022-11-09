@@ -10,6 +10,12 @@ html {
   box-sizing: inherit;
 }
 
+.navspacing {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 /*
  * Global layout stuff
  */

@@ -3,14 +3,11 @@
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
+  position: fixed;
   display: flex;
   padding: 1.5em;
   justify-content: space-between;
-}
-
-
-#logo {
-  font-size: 3rem;
+  align-items: center;
 }
 
 .write-tweet {
@@ -20,8 +17,10 @@
   display: flex;
 }
 
+#logo {
+  font-size: 3rem;
+}
+
 .fa-angles-down {
-  /* display: block !important; */
-  /* text-align: center; */
   color: red;
 }
