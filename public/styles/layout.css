@@ -34,3 +34,9 @@ span {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+}
