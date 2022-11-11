@@ -39,4 +39,5 @@ span {
   width: 90%;
   flex-direction: column;
   justify-content: center;
+  display: flex;
 }
