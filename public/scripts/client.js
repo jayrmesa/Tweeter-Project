@@ -11,6 +11,7 @@ let topHeader;
 
 $(() => {
   topHeader = $('.avatar').offset().top;
+  $('.write-tweet').on('click', toggleComposeTweet);
   $(window).scroll(toggleBackToTopButton);
   $('.back-to-top').on('click', scrollBackTop);
   loadTweets();
@@ -61,6 +62,13 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
+
+const toggleComposeTweet = function() {
+  $newTweet = $(this).closest('nav').siblings('main').find('.new-tweet');
+  $newTweet.slideToggle();
+
+  if (!$newTweet.is(':visible')) $('#tweet-text').focus();
+};
 
 // The button to return back to top should appear
 const toggleBackToTopButton = function() {
