@@ -1,0 +1,13 @@
+.back-to-top {
+  background-color: #4056A1;
+  color: white;
+  position: fixed;
+  right: 1.5rem;
+  bottom: .5rem;
+  padding: 1rem;
+  border-radius: 10%;
+}
+
+.back-to-top:hover {
+  color: #e49c18;
+}
