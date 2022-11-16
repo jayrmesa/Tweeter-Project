@@ -23,4 +23,11 @@
 
 .fa-angles-down {
   color: red;
+  font-size: 30px;
+  margin-bottom: .5rem;
+}
+
+.fa-angles-down:hover {
+  color: #e49c18;
+  font-size: 150%
 }
