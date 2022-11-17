@@ -23,6 +23,11 @@
   color: #FFFFFF;
 }
 
+.new-tweet button:hover {
+  box-shadow: 0.25rem 0.25rem rgb(127, 111, 153);
+  background-color: #e49c18;
+}
+
 .new-tweet div {
   font-family: "Bungee";
   justify-content: space-between;
