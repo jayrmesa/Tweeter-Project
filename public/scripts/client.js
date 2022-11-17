@@ -11,9 +11,12 @@ let topHeader;
 
 $(() => {
   topHeader = $('.avatar').offset().top;
+
+  $('#post-tweet').submit(postTweet);
   $('.write-tweet').on('click', toggleComposeTweet);
   $(window).scroll(toggleBackToTopButton);
   $('.back-to-top').on('click', scrollBackTop);
+
   loadTweets();
 
 });
@@ -21,6 +24,9 @@ $(() => {
 const renderTweets = (tweets) => {
   const $tweetsContainer = $('#tweets-container');
   $tweetsContainer.empty();
+
+  //form should reset
+  $tweetsContainer.siblings('section').find('#post-tweet').trigger('reset');
 
   for (const tweet of tweets) {
     $tweetsContainer.prepend(createTweetElement(tweet));
@@ -33,6 +39,15 @@ const loadTweets = () => {
     .then((data) => {
       renderTweets(data);
     })    
+};
+
+const postTweet = function(event) {
+  event.preventDefault();
+
+  $.post("/tweets", $(this).serialize())
+    .then(() => {
+      loadTweets();
+    })
 };
 
 const createTweetElement = (tweet) => {
@@ -82,9 +97,8 @@ const toggleBackToTopButton = function() {
 };
 
 const scrollBackTop = function() {
-  window.scroll({
+  window.scrollTo({
     top: 0, 
-    left: 0, 
     behavior: 'smooth'
   });
   $('.new-tweet').slideDown();
