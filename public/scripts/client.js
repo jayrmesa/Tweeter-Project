@@ -73,8 +73,10 @@ const toggleComposeTweet = function() {
 // The button to return back to top should appear
 const toggleBackToTopButton = function() {
   if ($(this).scrollTop() > topHeader) {
+    $('.write-tweet').hide();
     $('.back-to-top').show();
   } else {
+    $('.write-tweet').show();
     $('.back-to-top').hide();
   }
 };
