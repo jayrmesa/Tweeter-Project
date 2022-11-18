@@ -42,3 +42,7 @@ span {
   justify-content: center;
   display: flex;
 }
+
+.no-error {
+  display: none;
+}

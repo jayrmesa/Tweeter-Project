@@ -9,3 +9,7 @@ header {
   justify-content: center;
   display: flex;
 }
+
+header .userName {
+color:white;
+}

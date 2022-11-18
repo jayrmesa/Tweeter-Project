@@ -31,3 +31,7 @@
   color: #e49c18;
   font-size: 150%
 }
+
+.no-display {
+  display: none;
+}
