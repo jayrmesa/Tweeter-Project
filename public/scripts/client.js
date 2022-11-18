@@ -38,16 +38,34 @@ const loadTweets = () => {
   $.get("/tweets")
     .then((data) => {
       renderTweets(data);
-    })    
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+    });    
 };
 
 const postTweet = function(event) {
   event.preventDefault();
+  const textField = $(this).children('#tweet-text').val().trim();
+
+  if (!textField) {
+    showError(true);
+    return $('.error p').text('This field cannot be empty');
+  }
+
+  if (textField.length > MAX_CHARS) {
+    showError(true);
+    return $('.error p').text(`Exceeded maximum alloted characters of ${MAX_CHARS}`);
+  }
 
   $.post("/tweets", $(this).serialize())
     .then(() => {
+      showError(false);
       loadTweets();
     })
+    .catch((err) => {
+      console.log("Error:", err);
+    });
 };
 
 const createTweetElement = (tweet) => {
@@ -83,6 +101,25 @@ const toggleComposeTweet = function() {
   $newTweet.slideToggle();
 
   if (!$newTweet.is(':visible')) $('#tweet-text').focus();
+};
+
+const showError = (flag) => {
+  $error = $('#error');
+  $tweetText = $('#tweet-text');
+  
+  if (flag) {
+    $error.addClass('error');
+    $tweetText.addClass('border-error');
+    $error.removeClass('no-error');
+    $tweetText.removeClass('line-border');
+    $tweetText.focus();
+    return;
+  }
+  // it should remove the error messag when user type
+  $error.removeClass('error border-error');
+  $tweetText.removeClass('border-error');
+  $error.addClass('no-error');
+  $tweetText.addClass('line-border');
 };
 
 // The button to return back to top should appear
