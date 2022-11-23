@@ -50,12 +50,12 @@ const postTweet = function(event) {
 
   if (!textField) {
     showError(true);
-    return $('.error p').text('This field cannot be empty');
+    return $('.error p').text('There seems to be a problem, text field cannot be empty');
   }
 
   if (textField.length > MAX_CHARS) {
     showError(true);
-    return $('.error p').text(`Exceeded maximum alloted characters of ${MAX_CHARS}`);
+    return $('.error p').text(`Sorry! You have exceeded maximum alloted characters of ${MAX_CHARS}`);
   }
 
   $.post("/tweets", $(this).serialize())
