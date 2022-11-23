@@ -7,7 +7,7 @@
 
 .new-tweet textarea {
   width: 100%;
-  height: 3rem;
+  height: 3.9rem;
   margin-bottom: 1rem;
   background-color: inherit;
   font-weight: bold;
@@ -25,6 +25,16 @@
 
 .new-tweet button:hover {
   box-shadow: 0.25rem 0.25rem rgb(127, 111, 153);
+  cursor: pointer;
+  animation: shake .5s  infinite; 
+}
+
+@keyframes shake {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+
 }
 
 .new-tweet button:active {
