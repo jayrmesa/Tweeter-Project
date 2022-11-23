@@ -17,14 +17,38 @@
   display: flex;
 }
 
+.write-tweet:hover {
+  cursor: pointer;
+}
+
+.write-tweet p {
+  padding-bottom: 5%;
+  margin-bottom: -1px;
+}
+
+.write-tweet i {
+  animation: up-down 2s ease-in-out infinite;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+
+}
+
+
 #logo {
   font-size: 3rem;
 }
 
 .fa-angles-down {
   color: red;
-  font-size: 30px;
-  margin-bottom: .5rem;
+  font-size: 32px;
+  margin-bottom: 7%;
 }
 
 .fa-angles-down:hover {
@@ -35,3 +59,5 @@
 .no-display {
   display: none;
 }
+
+
