@@ -1,0 +1,73 @@
+@use 'variables';
+
+.tweet {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: variables.$border-theme;
+  padding: 1rem 3rem;
+  width: 100%;
+
+  &:hover {
+    box-shadow: variables.$box-shadow-tweets;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    @extend %flex-align-center
+  }
+
+  h3 {
+    margin-left: 1rem;
+    font-weight: lighter;
+  }
+
+}
+
+.handle {
+  color: variables.$handle-color;
+  font-weight: bold;
+}
+
+.message {
+  padding-bottom: 2rem;
+  font-weight: bold;
+  border-bottom: variables.$border-theme;
+  margin: 3rem -1rem 1rem -1rem;
+
+  p {
+    word-wrap: break-word;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.date {
+  margin: 0;
+  color: black;
+}
+
+.icons {
+  font-size: x-large;
+  color: #4056A1;
+
+  i {
+    margin: 4px;
+
+    &:hover {
+      color: variables.$hover-color;
+    }
+  }
+}
+
