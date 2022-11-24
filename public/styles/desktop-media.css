@@ -25,6 +25,10 @@
     align-self: flex-start;
   }
 
+  .fa-angles-down:hover {
+    color: #e49c18;
+  }
+
   .back-to-top {
     color: red;
     position: fixed;
