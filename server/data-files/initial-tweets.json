@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1668376025578
+    "created_at": 1668909187394
   },
   {
     "user": {
@@ -19,17 +19,28 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1668462425578
+    "created_at": 1668995587394
   },
   {
     "user": {
       "name": "Claire",
-      "avatars": "https://i.imgur.com/UYvfK7O.png",
+      "avatars": "https://i.imgur.com/z5LNkkB.png",
       "handle": "@Cl"
     },
     "content": {
       "text": "Hi do you work at the library? cause you're like a book, i'll be checking you out"
     },
-    "created_at": 1668548825578
+    "created_at": 1669081987394
+  },
+  {
+    "user": {
+      "name": "Sha-Sha",
+      "avatars": "https://i.imgur.com/v0JXau2.png",
+      "handle": "@Sha"
+    },
+    "content": {
+      "text": "What genre is the national anthem?          Country."
+    },
+    "created_at": 1669168387394
   }
 ]
