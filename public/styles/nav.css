@@ -10,7 +10,6 @@
   z-index: 10;
   justify-content: space-between;
   align-items: center;
- 
 }
 
 .write-tweet {
@@ -40,10 +39,7 @@
   50% {
     transform: translateY(50%);
   }
-
 }
-
-
 #logo {
   font-size: 3rem;
 }
@@ -61,5 +57,3 @@
 .no-display {
   display: none;
 }
-
-
