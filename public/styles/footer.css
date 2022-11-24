@@ -4,12 +4,10 @@
   bottom: 1rem;
   cursor: pointer;
 }
-
 .back-to-top:hover {
   color: #e49c18;
 }
-
 .back-to-top i {
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 2rem;
 }
