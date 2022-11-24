@@ -50,7 +50,7 @@ const postTweet = function(event) {
 
   if (!textField) {
     showError(true);
-    return $('.error p').text('There seems to be a problem, text field cannot be empty');
+    return $('.error p').text('There seems to be a problem, tweets cannot be empty');
   }
 
   if (textField.length > MAX_CHARS) {
