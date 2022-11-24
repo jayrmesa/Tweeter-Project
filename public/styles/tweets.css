@@ -1,3 +1,11 @@
+.header div {
+  align-items: center;
+}
+
+.header div {
+  display: flex;
+}
+
 .tweet {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -5,21 +13,14 @@
   padding: 1rem 3rem;
   width: 100%;
 }
-
 .tweet:hover {
-  box-shadow: 0.5rem 0.5rem rgb(127, 111, 153);
-}
-
-.header div {
-  display: flex;
-  align-items: center;
+  box-shadow: 0.5rem 0.5rem #7f6f99;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
 }
-
 .header h3 {
   margin-left: 1rem;
   font-weight: lighter;
@@ -36,7 +37,6 @@
   border-bottom: 4px solid #545149;
   margin: 3rem -1rem 1rem -1rem;
 }
-
 .message p {
   word-wrap: break-word;
   margin-left: 1em;
@@ -55,14 +55,12 @@
 }
 
 .icons {
-  font-size: large;
+  font-size: x-large;
   color: #4056A1;
 }
-
 .icons i {
-  margin: 0 4px;
+  margin: 4px;
 }
-
 .icons i:hover {
   color: #e49c18;
 }
