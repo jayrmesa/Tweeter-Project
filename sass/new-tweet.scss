@@ -1,0 +1,80 @@
+@use 'variables';
+
+.new-tweet {
+  flex-direction: column;
+  @extend %flex-justify-center;
+
+  textarea {
+    width: 100%;
+    height: 3.9rem;
+    margin-bottom: 1rem;
+    background-color: inherit;
+    font-weight: bold;
+    outline: none;
+    resize: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+ div {
+    font-family: "Bungee";
+    justify-content: space-between;
+    @extend %flex-align-center;
+  }
+
+ button {
+    background-color: variables.$tweet-button-color;
+    color: #FFFFFF;
+  
+    &:hover {
+      box-shadow: variables.$box-shadow-button;
+      cursor: pointer;
+      animation: bounce .5s  infinite; 
+    }
+  
+    @keyframes bounce {
+      from, to { transform: scale(1, 1); }
+      25% { transform: scale(0.9, 1.1); }
+      50% { transform: scale(1.1, 0.9); }
+      75% { transform: scale(0.95, 1.05); }
+    }
+  
+    &:active {
+      background-color: variables.$hover-color;
+    }
+  }
+
+}
+
+.line-border {
+  border-bottom: variables.$border-theme;
+}
+
+label {
+  font-size: 28px;
+}
+
+.red {
+  color: red;
+}
+
+.error {
+  color: red;
+  @extend %flex-align-center;
+
+ p {
+    margin: 1rem;
+    font-size: smaller;
+  }
+
+}
+
+.border-error {
+  border: 4px solid red;
+}
