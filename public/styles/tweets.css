@@ -36,6 +36,7 @@
   border-bottom: 4px solid #545149;
   margin: 3rem -1rem 1rem -1rem;
 }
+
 .message p {
   word-wrap: break-word;
   margin-left: 1em;
@@ -57,9 +58,11 @@
   font-size: large;
   color: #4056A1;
 }
+
 .icons i {
   margin: 0 4px;
 }
+
 .icons i:hover {
   color: #e49c18;
 }
