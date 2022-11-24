@@ -1,0 +1,43 @@
+@media only screen and (min-width: 1024px) {
+  .navspacing {
+    margin-top: 10rem;
+    flex-direction: row;
+    font-size: 25px;
+  }
+
+  .nav-bar {
+    display: flex;
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    z-index: 0;
+    background-color: #4056A1;
+  }
+
+  header {
+    display: flex;
+    position: sticky;
+    width: 35%;
+    top: 12rem;
+    margin-left: 1.5em;
+    padding: 2rem;
+    border-radius: 2%;
+    align-self: flex-start;
+  }
+
+  .back-to-top {
+    color: red;
+    position: fixed;
+    right: 2rem;
+    bottom: 1rem;
+  }
+
+  .container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    max-width: 75%;
+  }
+}
+
+
+
