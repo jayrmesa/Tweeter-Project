@@ -1,0 +1,44 @@
+$top-desktop-color: #4056A1;
+$tweet-button-color: #4056A1;
+$profile-color: #e49c18;
+$backtotop-color: red;
+$hover-color: #e49c18;
+$border-theme: 4px solid #545149; 
+
+%justify-center {
+  justify-content: center;
+}
+
+%align-center {
+  align-items: center;
+}
+
+%flex {
+  display: flex;
+}
+
+%flex-justify-center {
+  @extend %flex;
+  @extend %justify-center;
+}
+
+%flex-align-center {
+  @extend %flex;
+  @extend %align-center;
+}
+
+%flex-center-all {
+  @extend %flex;
+  @extend %justify-center;
+  @extend %align-center;
+}
+
+%flex-column {
+  @extend %flex;
+  flex-direction: column;
+}
+
+%flex-row {
+  @extend %flex;
+  flex-direction: row;
+}
