@@ -26,10 +26,10 @@
 .new-tweet button:hover {
   box-shadow: 0.25rem 0.25rem rgb(127, 111, 153);
   cursor: pointer;
-  animation: shake .5s  infinite; 
+  animation: bounce .5s  infinite; 
 }
 
-@keyframes shake {
+@keyframes bounce {
   from, to { transform: scale(1, 1); }
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
