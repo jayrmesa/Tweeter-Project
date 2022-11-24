@@ -26,12 +26,13 @@
 }
 
 .handle {
-  color: #B0B0AF;
+  color: #7987b4;
   font-weight: bold;
 }
 
 .message {
   padding-bottom: 2rem;
+  font-weight: bold;
   border-bottom: 4px solid #545149;
   margin: 3rem -1rem 1rem -1rem;
 }
