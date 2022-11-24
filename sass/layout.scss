@@ -13,8 +13,7 @@ html {
 }
 
 .navspacing {
-  align-items: center;
-  display: flex;
+  @extend %flex-align-center;
   flex-direction: column;
 }
 
@@ -23,27 +22,30 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: variables.$font-body-color;
+  background-color: variables.$background-body-color;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
-}
 
-span {
-  font-family: "Bungee", sans-serif;
+  span {
+    font-family: "Bungee", sans-serif;
+  }
+
+  .container {
+    width: 90%;
+    flex-direction: column;
+    @extend %flex-justify-center;
+  }
+
+  .no-error {
+    display: none;
+  }
+
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {
-  width: 90%;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-}
 
-.no-error {
-  display: none;
-}
+
