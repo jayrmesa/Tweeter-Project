@@ -1,0 +1,65 @@
+@use 'variables';
+
+.nav-bar {
+  height: 120px;
+  width: 100%;
+  background-color: transparent;
+  color: #FFFFFF;
+  position: absolute;
+  flex-direction: row;
+  padding: 1.5em;
+  z-index: 10;
+  justify-content: space-between;
+  @extend %flex-align-center;
+
+  #logo {
+    font-size: 3rem;
+  }
+  
+}
+
+.write-tweet {
+  @extend %flex-align-center;
+  flex-direction: column;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+   p {
+    padding-bottom: 5%;
+    margin-bottom: -1px;
+  }
+
+   i {
+    animation: up-down 2s ease-in-out infinite;
+  }
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+    }
+  50% {
+    transform: translateY(50%);
+    }
+  }
+}
+
+
+.fa-angles-down {
+  color: variables.$backtotop-color;
+  font-size: 32px;
+  margin-bottom: 7%;
+
+  &:hover {
+    color: variables.$hover-color-mobile;
+  }
+  
+}
+
+.no-display {
+  display: none;
+}
+
+
