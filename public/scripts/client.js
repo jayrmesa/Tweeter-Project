@@ -7,7 +7,7 @@
 const MAX_CHARS = 140; // MAX Letter per tweets
 let topHeader;
 
-// to click back to the top appears as the user scrolls
+// back to the top button appears as the user scrolls
 
 $(() => {
   topHeader = $('.avatar').offset().top;
@@ -20,6 +20,14 @@ $(() => {
   loadTweets();
 
 });
+
+// Toggle the text form for Tweet when clicking the Write a tweet
+const toggleComposeTweet = function() {
+  $newTweet = $(this).closest('nav').siblings('main').find('.new-tweet');
+  $newTweet.slideToggle();
+
+  if (!$newTweet.is(':visible')) $('#tweet-text').focus();
+};
 
 const renderTweets = (tweets) => {
   const $tweetsContainer = $('#tweets-container');
@@ -44,30 +52,7 @@ const loadTweets = () => {
     });    
 };
 
-const postTweet = function(event) {
-  event.preventDefault();
-  const textField = $(this).children('#tweet-text').val().trim();
-
-  if (!textField) {
-    showError(true);
-    return $('.error p').text('There seems to be a problem, tweets cannot be empty');
-  }
-
-  if (textField.length > MAX_CHARS) {
-    showError(true);
-    return $('.error p').text(`Sorry! You have exceeded maximum alloted characters of ${MAX_CHARS}`);
-  }
-
-  $.post("/tweets", $(this).serialize())
-    .then(() => {
-      showError(false);
-      loadTweets();
-    })
-    .catch((err) => {
-      console.log("Error:", err);
-    });
-};
-
+// escape any 'unsafe' characters from the tweet content
 const safeHTML = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -101,12 +86,28 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
+const postTweet = function(event) {
+  event.preventDefault();
+  const textField = $(this).children('#tweet-text').val().trim();
 
-const toggleComposeTweet = function() {
-  $newTweet = $(this).closest('nav').siblings('main').find('.new-tweet');
-  $newTweet.slideToggle();
+  if (!textField) {
+    showError(true);
+    return $('.error p').text('There seems to be a problem, tweets cannot be empty');
+  }
 
-  if (!$newTweet.is(':visible')) $('#tweet-text').focus();
+  if (textField.length > MAX_CHARS) {
+    showError(true);
+    return $('.error p').text(`Sorry! You have exceeded maximum alloted characters of ${MAX_CHARS}`);
+  }
+
+  $.post("/tweets", $(this).serialize())
+    .then(() => {
+      showError(false);
+      loadTweets();
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+    });
 };
 
 const showError = (flag) => {
@@ -121,14 +122,14 @@ const showError = (flag) => {
     $tweetText.focus();
     return;
   }
-  // it should remove the error messag when user type
+  // it should remove the error message when user tweet
   $error.removeClass('error border-error');
   $tweetText.removeClass('border-error');
   $error.addClass('no-error');
   $tweetText.addClass('line-border');
 };
 
-// The button to return back to top should appear
+// The button to return back to top should appear and hides the Write a tweet
 const toggleBackToTopButton = function() {
   if ($(this).scrollTop() > topHeader) {
     $('.write-tweet').hide();
@@ -139,6 +140,7 @@ const toggleBackToTopButton = function() {
   }
 };
 
+// Scroll to top of page, focus on textarea for new tweet
 const scrollBackTop = function() {
   window.scrollTo({
     top: 0, 
