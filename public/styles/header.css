@@ -1,15 +1,23 @@
 header {
+  justify-content: center;
+}
+
+header {
+  align-items: center;
+}
+
+header {
+  display: flex;
+}
+
+header {
   padding-top: 120px;
   height: 520px;
   width: 100%;
   background-color: #e49c18;
   background-image: url("../images/foggy-birds.png");
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: flex;
 }
-
-header .userName {
+header h2 {
   color: white;
 }
