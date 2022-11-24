@@ -1,0 +1,17 @@
+@use 'variables';
+
+header {
+  padding-top: 120px;
+  height: 520px;
+  width: 100%;
+  background-color: variables.$profile-color; 
+  background-image: url("../images/foggy-birds.png");
+  flex-direction: column;
+  @extend %flex-center-all;
+
+ h2 {
+    color:white;
+    }
+    
+}
+
