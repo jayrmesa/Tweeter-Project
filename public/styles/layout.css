@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -19,7 +20,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -31,12 +31,10 @@ span {
   font-family: "Bungee", sans-serif;
 }
 
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- .container {
+.container {
   width: 90%;
   flex-direction: column;
   justify-content: center;
